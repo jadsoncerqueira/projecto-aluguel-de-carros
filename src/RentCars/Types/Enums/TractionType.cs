@@ -3,7 +3,7 @@ namespace RentCars.Types;
 //5 - Crie um enum `TractionType`
 public enum TractionType
 {
-  FrontWheelDrive,
-  RearWheelDrive,
-  AllWeelDrive,
+  FrontWheelDrive = 0,
+  RearWheelDrive = 1,
+  AllWeelDrive = 2,
 }

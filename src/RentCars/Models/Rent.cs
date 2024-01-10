@@ -13,7 +13,14 @@ public class Rent
     //10 - Crie o construtor de `Rent` seguindo as regras de negócio
     public Rent(Vehicle vehicle, Person person, int daysRented)
     {
-        throw new NotImplementedException();
+       double preco = vehicle.PricePerDay * daysRented;
+       if(person is LegalPerson) {
+        preco -= preco / 100 * 10 ;
+       } ;
+       Price = preco;
+       Status = RentStatus.Confirmed;
+       vehicle.IsRented = true;
+       person.Debit = preco;
     }
 
     //11 - Implemente os métodos de `cancelar` e `finalizar` um aluguel
