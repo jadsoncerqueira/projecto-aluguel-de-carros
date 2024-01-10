@@ -15,7 +15,7 @@ public class Rent
     {
        double preco = vehicle.PricePerDay * daysRented;
        if(person is LegalPerson) {
-        preco -= preco * 0.09 ;
+        preco += preco * 0.1 ;
        } ;
        Price = preco;
        Status = RentStatus.Confirmed;
